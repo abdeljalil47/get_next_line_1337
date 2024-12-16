@@ -1,0 +1,3 @@
+routine fd1
+goodbye fd1
+goodbay fd1
