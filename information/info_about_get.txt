@@ -1,0 +1,21 @@
+*=> Why variable temp?
+ -> we use temp to free the data and assign new data to tab with out losing the pointers of the old, and to avoid memory leaks.
+
+*=> File descriptor?
+ -> File is ID that descriptor an open file in process running.
+
+*=> What is system call?
+ -> System call is the programmatic way in which a computer program requests a service from the kernel of the OS.
+ -> These calls are generally available as routines written in C and C++. "systemCall.png".
+
+
+*=> In file descriptor table: file_descriptor_table.png
+ ⇒ the file descriptor created by open that returns a number
+ ⇾ the OFFSET is like a counter that READ uses to know it reached the end of the file by comparing it with the size.
+ ⇾ the SIZE is the size of the file that has been opened.
+
+--> so the function write it uses offset itself, and if I use write to write in the file like "3" characters and use read
+	Without  without close the file, it is not going to read the file; it "returns 0" because offset has been moved by write, so
+	Offset equal size; should close file and then open it again, then going to read at all.
+	
+file_descrptor_table.png
